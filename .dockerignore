@@ -1,0 +1,26 @@
+# Nicht ins Docker-Image kopieren
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.db
+*.sqlite*
+*.log
+*.bundle
+
+# Zugangsdaten - werden zur Laufzeit per --env-file uebergeben
+.env
+.env.*
+
+# Git / Editor
+.git/
+.gitignore
+.vscode/
+
+# Laufzeitdaten (kommen ueber Volumes), Doku
+uploads/
+reports_out/
+Dokumentation/
+README.md
+Dockerfile
+.dockerignore

@@ -18,6 +18,17 @@ python main.py
 
 Danach im Browser oeffnen: http://localhost:8080
 
+## Docker
+
+```
+docker build -t ekey-audit .
+docker run -p 8080:8080 --env-file .env.docker -v ekey-audit-uploads:/app/uploads -v ekey-audit-reports:/app/reports_out ekey-audit
+```
+
+`.env.example` nach `.env.docker` kopieren und ausfuellen. Im Container ist keine
+Windows-Authentifizierung moeglich - SQL-Login verwenden (`EKEY_MSSQL_TRUSTED_CONNECTION=no`)
+und `EKEY_AUDIT_SECRET_KEY` setzen. Im Container laeuft gunicorn (`wsgi.py`), lokal weiterhin `python main.py`.
+
 ## Login
 
 - Benutzername: `admin`

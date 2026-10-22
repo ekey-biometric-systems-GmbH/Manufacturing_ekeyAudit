@@ -6,3 +6,5 @@ ldap3>=2.9
 pyodbc>=5.0
 openpyxl>=3.1
 xlrd==1.2.0
+# Produktions-Webserver fuer den Docker-Container (nur Linux)
+gunicorn>=22.0; sys_platform != "win32"

@@ -44,9 +44,11 @@ REPORT_DIR = os.path.join(BASE_DIR, "reports_out")
 SECRET_KEY = os.environ.get("EKEY_AUDIT_SECRET_KEY", "ekey-audit-dev-secret-key-2026-change-me")
 
 # Server-Einstellungen
-HOST = "127.0.0.1"
-PORT = 8080
-DEBUG = True
+# Lokal: 127.0.0.1 / Debug an. Im Docker-Container per Umgebungsvariable
+# ueberschrieben (EKEY_HOST=0.0.0.0, EKEY_DEBUG=false - siehe Dockerfile).
+HOST = os.environ.get("EKEY_HOST", "127.0.0.1")
+PORT = int(os.environ.get("EKEY_PORT", "8080"))
+DEBUG = os.environ.get("EKEY_DEBUG", "true").lower() in ("1", "true", "yes")
 
 # Firmenname / Anwendungstitel
 APP_TITLE = "ekeyAudit - QM Auditmanagement (ISO 9001)"
