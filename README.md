@@ -33,4 +33,6 @@ Ein erneuter Start seedet die Daten nicht doppelt.
   Spezifikation noch offen (TBD) und wurden bewusst nicht implementiert (Platzhalter-Hinweis in der GUI:
   "in Entwicklung").
 - E-Mail-Erinnerungen (`com.py`) sind aktuell nur als Logging-Dummy umgesetzt (kein echter SMTP-Versand).
-- Der Ordner `Dokumentation/` mit den bestehenden Word-Dateien wurde nicht veraendert.
+- Nicht im Repository (nur lokal, siehe `.gitignore`): `Dokumentation/`, die SQLite-Datei
+  `ekeyQMAudits.db`, hochgeladene Anhaenge (`uploads/`) und erzeugte Berichte (`reports_out/`).
+  Die Ordner `uploads/` und `reports_out/` werden beim Start automatisch angelegt.

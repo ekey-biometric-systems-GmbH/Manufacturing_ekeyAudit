@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Konfiguration / Zugangsdaten (nie committen)
+.env
+.env.*
+!.env.example
+
+# Lokale SQLite-Datenbank (Entwicklung/Test)
+*.db
+*.sqlite*
+
+# Laufzeitdaten: hochgeladene Anhaenge und erzeugte Berichte
+uploads/
+reports_out/
+
+# Logs
+*.log
+
+# Dokumentation (nur lokal, nicht im Repo)
+Dokumentation/
+
+# Office-Sperrdateien
+~$*
+
+# OS
+.DS_Store
+Thumbs.db
